@@ -7,14 +7,16 @@ const palindromes = function(text) {
 
     for (let i = 0; i < lowerTextArray.length; i++) {
         if (alphabet.includes(lowerTextArray[i])) {
-            cleanedTextArray.append(lowerTextArray[i]);
+            cleanedTextArray.push(lowerTextArray[i]);
         }
     }
 
-    cleanedTextArrayReversed = [...cleanedTextArray];
+    cleanedTextArrayReversed = [...cleanedTextArray].reverse();
 
-    if (cleanedTextArray === cleanedTextArrayReversed) {
+    if (cleanedTextArray.join("") === cleanedTextArrayReversed.join("")) {
         return true;
+    } else {
+        return false;
     }
 }
 
