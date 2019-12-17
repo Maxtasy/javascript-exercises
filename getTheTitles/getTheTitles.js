@@ -1,5 +1,5 @@
-const getTheTitles = function(books) {
-    const titles = books.map(function(book) {
+const getTheTitles = function(array) {
+    const titles = array.map(function(book) {
         return book.title;
     });
 
