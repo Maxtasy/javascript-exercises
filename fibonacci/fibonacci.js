@@ -10,7 +10,7 @@ const fibonacci = function(num) {
     }
     
     for (let i = 4; i <= num; i++) {
-        fib.append(fib[i - 2] + fib[i - 1]);
+        fib.push(fib[i - 2] + fib[i - 1]);
     }
 
     return fib[num];
