@@ -1,5 +1,5 @@
 const palindromes = function(text) {
-    const alphabet = "abcdefghijklmnopqrstuxyz".split("");
+    const alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
 
     const lowerTextArray = text.toLowerCase().split("");
 
