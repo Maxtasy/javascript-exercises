@@ -1,18 +1,24 @@
-const caesar = function(text, num) {
+const caesar = function(text, offset) {
     const alphabetSmall = "abcdefghijklmnopqrstuvwxyz".split("");
-    const alphabetBig = "ABCDEFGHIJKLMNOPQRSTUVQXYZ".split("");
+    const alphabetBig = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 
     const textArray = text.split("");
 
     const result = [];
 
-    for (let i = 0; i < textArray.lenght; i++) {
-        if (alphabetSmall.includes(textArray[i])) {
-            result.append(alphabetSmall[(alphabetSmall[alphabetSmall.indexOf(textArray[i])] + num) % alphabetSmall.length]);
-        } else if (alphabetBig.includes(textArray[i])) {
-            result.append(alphabetBig[(alphabetBig[alphabetBig.indexOf(textArray[i])] + num) % alphabetBig.length]);
+    for (let i = 0; i < textArray.length; i++) {
+        const currentCharacter = textArray[i];
+
+        if (alphabetSmall.includes(currentCharacter)) {
+            const index = alphabetSmall.indexOf(currentCharacter);
+
+            result.push(alphabetSmall[(index + offset) % alphabetSmall.length]);
+        } else if (alphabetBig.includes(currentCharacter)) {
+            const index = alphabetBig.indexOf(currentCharacter);
+
+            result.push(alphabetBig[(index + offset) % alphabetBig.length]);
         } else {
-            result.append(textArray[i]);
+            result.push(currentCharacter);
         }
     }
 
