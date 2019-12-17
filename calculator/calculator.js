@@ -7,7 +7,7 @@ function subtract(num1, num2) {
 }
 
 function sum(arr) {
-	const sum = 0;
+	let sum = 0;
 	for (let i = 0; i < arr.length; i++) {
 		sum += arr[i];
 	}
@@ -16,7 +16,7 @@ function sum(arr) {
 }
 
 function multiply(arr) {
-	const result = 0
+	let result = 1
 	for (let i = 0; i < arr.length; i++) {
 		result *= arr[i];
 	}
@@ -28,9 +28,9 @@ function power(num, expo) {
 }
 
 function factorial(num) {
-	const fact = 0;
+	let fact = 1;
 	for (let i = num; i > 0; i--) {
-		fact += i;
+		fact *= i;
 	}
 
 	return fact;
