@@ -1,16 +1,15 @@
 const removeFromArray = function() {
-    let newArray = arguments[0];
+    const arr = arguments[0];
 
-    for (let i = 1; i < arguments.length; i++) {
-        index = newArray.indexOf(arguments[i]);
-
-        if (index === -1) { continue }
-
-        newArray = newArray.slice(0, index).concat(newArray.slice(index + 1));
+    if (arguments.length > 1) {
+        for (let i = 1; i < arguments.length; i++) {
+            if (arr.includes(arguments[i])) {
+                arr.splice(arr.indexOf(arguments[i]), 1);
+            }
+        }
     }
-    
 
-    return newArray;
+    return arr;
 }
 
 module.exports = removeFromArray
